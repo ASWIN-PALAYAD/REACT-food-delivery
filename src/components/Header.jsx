@@ -48,7 +48,7 @@ const Header = () => {
 
 
   return (
-    <header className='fixed z-50 w-screen p-3 px-4 md:p-6 md:px-16'>
+    <header className='fixed z-50 w-screen p-3 px-4 md:p-6 md:px-16 bg-primary'>
 
       {/* desktop view */}
 
@@ -107,7 +107,8 @@ const Header = () => {
                   {user && user.email === 'aswinpalayad07@gmail.com' && (
                     <Link to={"/createItem"}>
                       <p className='px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 first-letter 
-                  transition-all duration-100 ease-in-out text-textColor text-base'>
+                  transition-all duration-100 ease-in-out text-textColor text-base ' 
+                  onClick={() => setIsMenu(false)}>
                         New Item <MdAdd /> </p>
                     </Link>
 
@@ -164,7 +165,7 @@ const Header = () => {
                 {user && user.email === 'aswinpalayad07@gmail.com' && (
                   <Link to={"/createItem"}>
                     <p className='px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 first-letter 
-                  transition-all duration-100 ease-in-out text-textColor text-base'>
+                  transition-all duration-100 ease-in-out text-textColor text-base' onClick={() => setIsMenu(false)}>
                       New Item <MdAdd /> </p>
                   </Link>
 
@@ -175,13 +176,13 @@ const Header = () => {
           cursor-pointer hover:bg-slate-100 px-4 py-2 >' >
                     Home</li>
                   <li className='text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out 
-                 cursor-pointer   hover:bg-slate-100 px-4 py-2 >' >
+                 cursor-pointer   hover:bg-slate-100 px-4 py-2 >' onClick={() => setIsMenu(false)}>
                     Menu</li>
                   <li className='text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out 
-                cursor-pointer  hover:bg-slate-100 px-4 py-2 >' >
+                cursor-pointer  hover:bg-slate-100 px-4 py-2 >' onClick={() => setIsMenu(false)} >
                     About Us</li>
                   <li className='text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out 
-          cursor-pointer  hover:bg-slate-100 px-4 py-2 >' >
+          cursor-pointer  hover:bg-slate-100 px-4 py-2 >' onClick={() => setIsMenu(false)}>
                     Services</li>
                 </ul>
 
